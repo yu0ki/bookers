@@ -22,6 +22,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+p{
+    font-size: 13px;
+}
  
 .top-page-container{
     margin: 33px;
@@ -34,7 +38,6 @@
 }
 
 
-
 .top-message{
     padding-top: 20px;
     padding-bottom: 11px;
@@ -42,4 +45,34 @@
     font-size: 13px;
 }
 
+/*booksコントローラー index.html.erb
+top.html.erbで使用したCSSを再利用する場合は、クラス名を同じにしている。*/
+.books-table{
+    margin: 20px;
+    font-size: 13px;
+    
+}
+
+.books-table-cell1{
+    padding: 1px 5px 7px;
+}
+
+.books-table-cell2{
+    padding: 1px 5px 7px;
+}
+
+.books-table-cell3{
+    padding: 1px 5px 7px;
+    
+}
+
+.input-area{
+    padding-top: 10px;
+    padding-left: 0px;
+    font-size: 13px;
+}
+
+input{
+    padding: 1px 6px;
+}
 
