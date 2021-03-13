@@ -1,1 +1,17 @@
-<h1>Books#Show</h1>
+<section class = "top-page-container">
+    <div class = "font-size-13 show-content">
+        <p><strong>Title: </strong><%= @book.title %></p>
+    </div>
+    
+    <div class = "font-size-13 show-content">
+        <p><strong>Body: </strong><%= @book.body %></p>
+    </div>
+    
+    <p class = "font-size-13">
+        <%= link_to 'Edit', edit_book_path(@book)%>
+        <span> | </span>
+        <%= link_to 'Back', books_path %>
+    </p>
+   
+    
+</section>

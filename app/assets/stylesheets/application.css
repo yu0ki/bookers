@@ -23,7 +23,7 @@
     box-sizing: border-box;
 }
 
-p{
+.font-size-13{
     font-size: 13px;
 }
  
@@ -55,15 +55,24 @@ top.html.erbで使用したCSSを再利用する場合は、クラス名を同�
 
 .books-table-cell1{
     padding: 1px 5px 7px;
+    max-width: 180px;
 }
 
 .books-table-cell2{
     padding: 1px 5px 7px;
+    max-width: 400px;
 }
 
 .books-table-cell3{
     padding: 1px 5px 7px;
+}
+
+.to-omit{
     
+    /*display: block;*/
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .input-area{
@@ -74,5 +83,23 @@ top.html.erbで使用したCSSを再利用する場合は、クラス名を同�
 
 input{
     padding: 1px 6px;
+}
+
+/*詳細ページshow.html.erbのレイアウト*/
+.show-content{
+    margin: 33px;
+    margin-bottom: 30px;
+}
+
+/*編集ページ*/
+.edit-area-title{
+    padding-top: 12px;
+    font-size: 13px;
+}
+
+.edit-area{
+    padding-top: 12px;
+    padding-bottom: 5px;  
+    font-size: 13px;
 }
 

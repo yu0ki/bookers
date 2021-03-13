@@ -1,1 +1,25 @@
-<h1>books#edit</h1>
+<section class = "top-page-container">
+    <h1 class = "top-heading">Editing Book</h1>
+    
+    <%= form_with model: @book, url:book_path(@book), local:true do |f| %>
+        <div class = "edit-area-title">
+            <%= f.label :title, 'Title' %><br>
+            <%= f.text_field :title %>
+        </div>
+        
+        <div class = "edit-area">
+            <%= f.label :body, 'Body' %><br>
+            <%= f.text_area :body %>
+        </div>
+        
+        <div class = "edit-area">
+            <%= f.submit 'Update Book' %>
+        </div>
+    <%end%>
+    
+    <p class = "font-size-13" style = "padding-top: 5px">
+        <%= link_to 'Show', book_path(@book)%>
+        <span> | </span>
+        <%= link_to 'Back', books_path %>
+    </p>
+</section>
