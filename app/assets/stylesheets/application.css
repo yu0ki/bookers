@@ -17,16 +17,29 @@
  /*homes_contollerのトップページのCSS*/
  /*top.html.erb*/
  
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
 .top-page-container{
     margin: 33px;
+    margin-top: 25px;
+    font-family: verdana, arial, helvetica, sans-serif;
 }
 
 .top-heading{
-    font-size: 26px;
+    font-size: 26px
 }
 
+
+
 .top-message{
-    padding-left: 30px;    
+    padding-top: 20px;
+    padding-bottom: 11px;
+    padding-left: 33px;
+    font-size: 13px;
 }
 
 
