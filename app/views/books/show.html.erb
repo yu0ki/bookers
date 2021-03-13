@@ -1,4 +1,9 @@
 <section class = "top-page-container">
+    
+    <% if flash[:notice] %>
+        <%= flash[:notice] %>
+    <%end%>
+    
     <div class = "font-size-13 show-content">
         <p><strong>Title: </strong><%= @book.title %></p>
     </div>

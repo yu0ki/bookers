@@ -1,6 +1,18 @@
 <section class = "top-page-container">
     <h1 class = "top-heading">Books</h1>
     
+    <!--destroyのサクセスメッセージ-->
+    <% if flash[:notice] %>
+        <%= flash[:notice] %>
+    <% end %>
+    
+    <!--destroy, createのエラーメッセージ-->
+    <% @book.error.full_messages.each do |message| %>
+        <div>
+            <%= message %>
+        </div>
+    <% end %>
+    
     <table class = "books-table">
         <tr>
             <th class = "books-table-cell1">Title</th>

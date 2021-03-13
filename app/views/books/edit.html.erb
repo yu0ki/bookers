@@ -1,6 +1,13 @@
 <section class = "top-page-container">
     <h1 class = "top-heading">Editing Book</h1>
     
+    <!--editのエラーメッセージ-->
+    <% @book.error.full_messages.each do |message| %>
+        <div>
+            <%= message %>
+        </div>
+    <% end %>
+    
     <%= form_with model: @book, url:book_path(@book), local:true do |f| %>
         <div class = "edit-area-title">
             <%= f.label :title, 'Title' %><br>
