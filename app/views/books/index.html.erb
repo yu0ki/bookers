@@ -1,3 +1,4 @@
+<!--投稿内容の一覧表示に関するセクション-->
 <section class = "top-page-container">
     <h1 class = "top-heading">Books</h1>
     
@@ -9,15 +10,17 @@
     </div>
     
     
-   
-    
+    <!--一覧表示テーブル-->
     <table class = "books-table">
+        
+        <!--一行目：見出し-->
         <tr>
             <th class = "books-table-cell1">Title</th>
             <th class = "books-table-cell2">Body</th>
-            
         </tr>
         
+        <!--2行目以降：モデルから取得したすべてのレコードの情報を成形して表示
+            また、詳細表示、編集、削除へのリンクを設定-->
         <% @books.each do |book| %>
             <tr>
                 <td class = "books-table-cell1 to-omit"><%= book.title %></td>
@@ -27,22 +30,21 @@
                 <td class = "books-table-cell3"><%= link_to 'Destroy', book_path(book), method: :delete %></td>
             </tr>
         <%end%>
-        
     </table>
 </section>
 
 
  
-
+<!--新規作成フォームに関するセクション-->
 <section class = "top-page-container">
     <h1 style = "font-size: 19.5px">New Book</h1>
     
     <!--バリデーションチェックのエラー文の表示記述-->
- 
     <div class = "error-message-container">
         <%= render('layouts/error_messages') %>
     </div>
     
+    <!--投稿フォーム-->
     <%= form_with model: @book, url:books_path, local:true do |f| %>
         <div class = "input-area">
             <%= f.label :title, 'Title' %><br>
@@ -57,6 +59,5 @@
         <div class = "input-area">
             <%= f.submit 'Create Book' %>
         </div>
-        
     <% end %>
 </section>

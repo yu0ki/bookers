@@ -1,25 +1,27 @@
+<!--詳細表示ページの内容全部を囲むセクション-->
 <section class = "top-page-container">
     
+    <!--投稿・が成功した場合のサクセスメッセージ表示-->
     <div class = "success-message-container">
         <% if flash[:notice] %>
             <%= flash[:notice] %>
         <%end%>
     </div>
    
-    
+    <!--タイトルの表示-->
     <div class = "font-size-13 show-content">
         <p><strong>Title: </strong><%= @book.title %></p>
     </div>
     
+    <!--感想の表示-->
     <div class = "font-size-13 show-content">
         <p><strong>Body: </strong><%= @book.body %></p>
     </div>
     
+    <!--各種リンクの設定-->
     <p class = "font-size-13">
         <%= link_to 'Edit', edit_book_path(@book)%>
         <span> | </span>
         <%= link_to 'Back', books_path %>
     </p>
-   
-    
 </section>

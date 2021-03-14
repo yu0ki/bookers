@@ -1,3 +1,4 @@
+<!--編集ページ全体を囲むセクション-->
 <section class = "top-page-container">
     <h1 class = "top-heading">Editing Book</h1>
     
@@ -6,22 +7,29 @@
         <%= render('layouts/error_messages') %>
     </div>
     
+    <!--編集用フォーム-->
     <%= form_with model: @book, url:book_path(@book), local:true do |f| %>
+       
+       <!--タイトル入力フィールド-->
         <div class = "edit-area-title">
             <%= f.label :title, 'Title' %><br>
             <%= f.text_field :title %>
         </div>
         
+        <!--本文編集エリア-->
         <div class = "edit-area">
             <%= f.label :body, 'Body' %><br>
             <%= f.text_area :body %>
         </div>
         
+        <!--更新ボタン-->
         <div class = "edit-area">
             <%= f.submit 'Update Book' %>
         </div>
     <%end%>
     
+    
+    <!--各種リンク-->
     <p class = "font-size-13" style = "padding-top: 5px">
         <%= link_to 'Show', book_path(@book)%>
         <span> | </span>

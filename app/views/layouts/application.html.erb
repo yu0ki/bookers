@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+  
   <head>
     <title>Bookers</title>
     <%= csrf_meta_tags %>
@@ -9,7 +10,9 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+<!--yieldには各ページごとに固有のビューが挿入される-->
   <body>
     <%= yield %>
   </body>
+  
 </html>
