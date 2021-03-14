@@ -15,7 +15,9 @@ class BooksController < ApplicationController
            flash[:notice] = 'Your Impression was succesfully created!'
            redirect_to book_path(book)
         else
-            render('books/new')
+            @books = Book.all
+            @book = book
+            render('books/index')
         end
        
     end
@@ -34,6 +36,7 @@ class BooksController < ApplicationController
            flash[:notice] = 'Your Impression was succesfully updated!'
            redirect_to book_path(book)
         else
+            @book = book
             render('books/edit')
         end
     end

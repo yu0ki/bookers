@@ -2,16 +2,14 @@
     <h1 class = "top-heading">Books</h1>
     
     <!--destroyのサクセスメッセージ-->
-    <% if flash[:notice] %>
-        <%= flash[:notice] %>
-    <% end %>
+    <div class = "success-message-container">
+        <% if flash[:notice] %>
+            <%= flash[:notice] %>
+        <% end %>
+    </div>
     
-    <!--destroy, createのエラーメッセージ-->
-    <% @book.error.full_messages.each do |message| %>
-        <div>
-            <%= message %>
-        </div>
-    <% end %>
+    
+   
     
     <table class = "books-table">
         <tr>
@@ -33,8 +31,17 @@
     </table>
 </section>
 
+
+ 
+
 <section class = "top-page-container">
     <h1 style = "font-size: 19.5px">New Book</h1>
+    
+    <!--バリデーションチェックのエラー文の表示記述-->
+ 
+    <div class = "error-message-container">
+        <%= render('layouts/error_messages') %>
+    </div>
     
     <%= form_with model: @book, url:books_path, local:true do |f| %>
         <div class = "input-area">
